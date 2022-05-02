@@ -11,7 +11,7 @@ import News from './News';
 const {Title}=Typography;
 
 const Homepage = () => {
-    const {data, isFetching} = useGetCryptosQuery();
+    const {data, isFetching} = useGetCryptosQuery(10);
     const globalStats = data?.data?.stats;
 
     if(isFetching) return 'Loading...';
@@ -33,7 +33,7 @@ const Homepage = () => {
         <Title level={2} className = "home-title">Top 10 Cryptocurrencies in the world</Title>
         <Title level={3} className = "show-more"><Link to="/cryptocurrencies">Show More</Link></Title>
     </div>
-    <Cryptocurrencies simplified/>
+    <Cryptocurrencies simplified={true}/>
     <div className='home-heading-container'>
         <Title level={2} className = "home-title">Show Latest News</Title>
         <Title level={3} className = "show-more"><Link to="/news">Show More</Link></Title>
