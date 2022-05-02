@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import millify from 'millify';
+import thousandify from 'thousandify';
 import { Link } from 'react-router-dom';
 import {Card,Row,Col,Input} from 'antd';
 
@@ -24,8 +25,10 @@ const Cryptocurrencies = () => {
               hoverable
               >
                 <p>Price: {millify(currency.price)}</p>
-                <p>Price: {millify(currency.marketCap)}</p>
-                <p>Price: {millify(currency.change)}%</p>
+                <p>Market Cap: {millify(currency.marketCap)}</p>
+                <p>Daily Change: {millify(currency.change)}%</p>
+                <p>BTC Price: {(currency.btcPrice)} BTC</p>
+                <p>Listed At:{millify(currency.listedAt)}</p>
                 </Card>
               </Link> 
           </Col>
