@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
 :root{
     --text-primary:#000;
     --bgPrimary:#fff;
@@ -53,6 +55,7 @@ a:hover{
 }
 .logo{
     margin:0 0 0 15px;
+    font-family: 'Koulen', cursive;
 }
 .logo a{
    color: white;
